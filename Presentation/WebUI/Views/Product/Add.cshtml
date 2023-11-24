@@ -1,0 +1,53 @@
+﻿@using QSMS.Application.Features.DTOs.Product;
+@model CreateProductDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description">
+                            Basic form layout
+                        </p>
+                        <form asp-controller="Product" asp-action="Add" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="Name" for="exampleInputUsername1">Ürün Adı</label>
+                                <input type="text" asp-for="Name" class="form-control" id="exampleInputUsername1">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Stock" for="exampleInputEmail1">Stok</label>
+                                <input type="number" asp-for="Stock" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" for="exampleInputPassword1">Açıklama</label>
+                                <input asp-for="Description" type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price" for="exampleInputConfirmPassword1">Fiyat</label>
+                                <input asp-for="Price" type="number" class="form-control" id="exampleInputConfirmPassword1">
+                            </div>
+                            <div class="form-group">
+                                <select id="getCheque" asp-for="Tags" name="Tags" asp-items="@(new SelectList( ViewBag.TagList,"Value","Text"))" class="default-select wide form-control" id="validationCustom05" >
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select id="getCheque" asp-for="Categories" name="Categories" asp-items="@(new SelectList( ViewBag.CategoryList,"Value","Text"))" class="default-select wide form-control" id="validationCustom05" >
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Ürün Ekle</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

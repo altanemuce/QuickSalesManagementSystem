@@ -1,0 +1,33 @@
+﻿@using QSMS.Application.Features.DTOs.Category;
+@model CreateCategoryDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description">
+                            Basic form layout
+                        </p>
+                        <form asp-controller="Category" asp-action="Add" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="CategoryName" for="exampleInputUsername1">Kategori Adı</label>
+                                <input type="text" asp-for="CategoryName" class="form-control" id="exampleInputUsername1">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary me-2">Kategori Ekle</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

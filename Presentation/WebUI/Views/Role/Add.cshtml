@@ -1,0 +1,34 @@
+﻿@using QSMS.Application.Features.DTOs.Role;
+@model CreateRoleDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description">
+                            Basic form layout
+                        </p>
+                        <form asp-controller="Role" asp-action="Add" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="RoleName" for="exampleInputUsername1">Rol Adı</label>
+                                <input type="text" asp-for="RoleName" class="form-control" id="exampleInputUsername1">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Rol Ekle</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

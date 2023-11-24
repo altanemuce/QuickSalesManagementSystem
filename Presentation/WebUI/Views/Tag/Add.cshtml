@@ -1,0 +1,35 @@
+﻿@using QSMS.Application.Features.DTOs.Tag;
+@model CreateTagDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description">
+                            Basic form layout
+                        </p>
+                        <form asp-controller="Tag" asp-action="Add" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="TagName" for="exampleInputUsername1">Etiket Adı</label>
+                                <input type="text" asp-for="TagName" class="form-control" id="exampleInputUsername1">
+                            </div>
+                          
+                            <button type="submit" class="btn btn-primary me-2">Etiket Ekle</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
